@@ -21,24 +21,29 @@ run-gost:
 .PHONY: build
 build: factorio gost
 
-.PHONY: push
-push: push-factorio push-gost
-
 .PHONY: factorio
 factorio:
 	docker build --platform linux/amd64 -t "$(DOCKER_REPOSITORY)/factorio" .
-
-.PHONY: push-factorio
-push-factorio:
-	docker push "$(DOCKER_REPOSITORY)/factorio"
 
 .PHONY: gost
 gost:
 	docker build --platform linux/amd64 -t "$(DOCKER_REPOSITORY)/gost" -f gost.Dockerfile .
 
-.PHONY: push-gost
-push-gost:
-	docker push "$(DOCKER_REPOSITORY)/gost"
+.PHONY: push
+push: push-factorio push-gost
+
+push-%:
+	docker push "$(DOCKER_REPOSITORY)/$*"
+
+.PHONY: docker-configure
+docker-configure:
+	gcloud auth configure-docker us-central1-docker.pkg.dev,asia-northeast1-docker.pkg.dev
+
+.PHONY: pull
+pull: pull-factorio pull-gost
+
+pull-%:
+	docker pull "$(DOCKER_REPOSITORY)/$*"
 
 ################################################################################
 # Mods
