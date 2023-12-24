@@ -1,0 +1,111 @@
+
+{
+  "mods": 
+  [
+    
+    {
+      "name": "base",
+      "enabled": true
+    },
+    
+    {
+      "name": "alien-biomes",
+      "enabled": true
+    },
+    
+    {
+      "name": "angelspetrochem",
+      "enabled": true
+    },
+    
+    {
+      "name": "angelsrefining",
+      "enabled": true
+    },
+    
+    {
+      "name": "angelssmelting",
+      "enabled": true
+    },
+    
+    {
+      "name": "boblibrary",
+      "enabled": true
+    },
+    
+    {
+      "name": "boblogistics",
+      "enabled": true
+    },
+    
+    {
+      "name": "Bottleneck",
+      "enabled": true
+    },
+    
+    {
+      "name": "chest-auto-sort",
+      "enabled": true
+    },
+    
+    {
+      "name": "clock",
+      "enabled": true
+    },
+    
+    {
+      "name": "CursorEnhancements",
+      "enabled": true
+    },
+    
+    {
+      "name": "flib",
+      "enabled": true
+    },
+    
+    {
+      "name": "FNEI",
+      "enabled": true
+    },
+    
+    {
+      "name": "helmod",
+      "enabled": true
+    },
+    
+    {
+      "name": "nullius",
+      "enabled": true
+    },
+    
+    {
+      "name": "nullius-ja",
+      "enabled": true
+    },
+    
+    {
+      "name": "RecipeBook",
+      "enabled": true
+    },
+    
+    {
+      "name": "Squeak Through",
+      "enabled": true
+    },
+    
+    {
+      "name": "TimeTools",
+      "enabled": true
+    },
+    
+    {
+      "name": "Todo-List",
+      "enabled": true
+    },
+    
+    {
+      "name": "YARM",
+      "enabled": true
+    }
+  ]
+}
