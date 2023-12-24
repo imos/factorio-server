@@ -28,4 +28,4 @@ ADD scripts /usr/local/scripts
 ADD data/kcp.conf /etc/gost/kcp.conf
 
 ENTRYPOINT ["bash", "/usr/local/scripts/run.sh"]
-CMD ["/usr/local/factorio/saves/primary.zip"]
+CMD ["/usr/local/factorio/saves/PreferredNullius.zip"]
