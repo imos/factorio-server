@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=DontWarn
@@ -8,13 +8,13 @@ RUN apt-get update -q && apt-get install -qy wget unar && \
 
 WORKDIR /usr/local
 RUN wget -O /tmp/gost.gz \
-        https://github.com/ginuerzh/gost/releases/download/v2.11.1/gost-linux-amd64-2.11.1.gz && \
+        https://github.com/ginuerzh/gost/releases/download/v2.11.5/gost-linux-amd64-2.11.5.gz && \
     unar /tmp/gost.gz && \
     mv gost /usr/local/bin/gost && \
     chmod +x /usr/local/bin/gost
 
 RUN wget -O /tmp/factorio.tar.xz \
-        https://factorio.com/get-download/latest/headless/linux64 && \
+        https://www.factorio.com/get-download/1.1.94/headless/linux64 && \
     unar /tmp/factorio.tar.xz
 
 WORKDIR /usr/local/factorio

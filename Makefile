@@ -1,24 +1,44 @@
-DOCKER_IMAGE = docker.pkg.github.com/imos/factorio-configs/pfn202102
+DOCKER_REPOSITORY = asia-northeast1-docker.pkg.dev/factorio-imoz-jp/public
 
 .PHONY: run
 run:
-	docker run --rm -i \
+	docker run --platform linux/amd64 --rm -i \
 		-v $(CURDIR)/saves:/usr/local/factorio/saves \
 		-p 0.0.0.0:34197:34197/udp -p 0.0.0.0:8388:8388/udp \
 		--name factorio \
-		$(DOCKER_IMAGE) 
-
-.PHONY: build
-build:
-	docker build -t $(DOCKER_IMAGE) .
-
-.PHONY: gost
-gost:
-	docker build -t docker.pkg.github.com/imos/factorio-configs/gost -f gost.Dockerfile .
+		"$(DOCKER_REPOSITORY)/factorio:latest"
 
 .PHONY: run-gost
 run-gost:
-	docker run --rm -i -p 0.0.0.0:34197:34197/udp --name factorio-gost docker.pkg.github.com/imos/factorio-configs/gost
+	docker run --platform linux/amd64 --rm -i \
+		-p 0.0.0.0:34197:34197/udp --name factorio-gost \
+		"$(DOCKER_REPOSITORY)/gost"
+
+################################################################################
+# Build
+################################################################################
+
+.PHONY: build
+build: factorio gost
+
+.PHONY: push
+push: push-factorio push-gost
+
+.PHONY: factorio
+factorio:
+	docker build --platform linux/amd64 -t "$(DOCKER_REPOSITORY)/factorio" .
+
+.PHONY: push-factorio
+push-factorio:
+	docker push "$(DOCKER_REPOSITORY)/factorio"
+
+.PHONY: gost
+gost:
+	docker build --platform linux/amd64 -t "$(DOCKER_REPOSITORY)/gost" -f gost.Dockerfile .
+
+.PHONY: push-gost
+push-gost:
+	docker push "$(DOCKER_REPOSITORY)/gost"
 
 ################################################################################
 # Mods
