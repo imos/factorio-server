@@ -1,3 +1,25 @@
+DOCKER_IMAGE = docker.pkg.github.com/imos/factorio-configs/pfn202102
+
+.PHONY: run
+run:
+	docker run --rm -i \
+		-v $(CURDIR)/saves:/usr/local/factorio/saves \
+		-p 0.0.0.0:34197:34197/udp -p 0.0.0.0:8388:8388/udp \
+		--name factorio \
+		$(DOCKER_IMAGE) 
+
+.PHONY: build
+build:
+	docker build -t $(DOCKER_IMAGE) .
+
+.PHONY: gost
+gost:
+	docker build -t docker.pkg.github.com/imos/factorio-configs/gost -f gost.Dockerfile .
+
+.PHONY: run-gost
+run-gost:
+	docker run --rm -i -p 0.0.0.0:34197:34197/udp --name factorio-gost docker.pkg.github.com/imos/factorio-configs/gost
+
 ################################################################################
 # Mods
 ################################################################################
