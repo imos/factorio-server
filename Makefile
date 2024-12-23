@@ -45,163 +45,123 @@ pull-%:
 # Mods
 ################################################################################
 mods: \
-	mods/alien-biomes_0.6.8.zip \
-	mods/angelspetrochem_0.9.25.zip \
-	mods/angelsrefining_0.12.5.zip \
-	mods/angelssmelting_0.6.22.zip \
-	mods/boblibrary_1.2.0.zip \
-	mods/boblogistics_1.2.0.zip \
-	mods/Bottleneck_0.11.7.zip \
-	mods/chest-auto-sort_1.0.0.zip \
-	mods/clock_1.1.0.zip \
-	mods/CursorEnhancements_2.1.0.zip \
-	mods/flib_0.13.0.zip \
-	mods/FNEI_0.4.1.zip \
-	mods/helmod_0.12.19.zip \
-	mods/nullius-ja_0.4.3.zip \
-	mods/nullius_1.8.3.zip \
-	mods/RecipeBook_3.5.7.zip \
-	mods/Squeak Through_1.8.2.zip \
-	mods/TimeTools_2.1.44.zip \
-	mods/Todo-List_19.3.0.zip \
-	mods/YARM_0.10.14.zip
+	mods/Bottleneck_0.12.1.zip \
+	mods/chest-auto-sort_1.3.0.zip \
+	mods/CursorEnhancements_2.2.2.zip \
+	mods/flib_0.16.0.zip \
+	mods/FluidMustFlow_1.4.2.zip \
+	mods/FNEI_0.4.5.zip \
+	mods/helmod_2.0.14.zip \
+	mods/maraxsis_1.24.4.zip \
+	mods/Mini_Trains_2.0.0.zip \
+	mods/RateCalculator_3.3.4.zip \
+	mods/robot_attrition_0.6.2.zip \
+	mods/SpidertronEnhancements_1.10.7.zip \
+	mods/SpidertronPatrols_2.5.8.zip \
+	mods/TimeTools_3.0.8.zip \
+	mods/visible-planets_1.2.9.zip
 
-mods/alien-biomes_0.6.8.zip:
+mods/Bottleneck_0.12.1.zip:
 	mkdir -p mods
 	bash scripts/download-from-gdrive.sh \
-		1g6plraywFbY1jlPmBdieTKd3fqf4qEHj \
-		"mods/alien-biomes_0.6.8.zip" \
-		4f0fbcf5bd3b7c82bcd661fa578c8ed5
+		1zotjRNUUDlH-c8CbmWguQ_bbL5wHeG_- \
+		"mods/Bottleneck_0.12.1.zip" \
+		17525c62d3cb69b1b1055c1eb0e7cddd
 
-mods/angelspetrochem_0.9.25.zip:
+mods/chest-auto-sort_1.3.0.zip:
 	mkdir -p mods
 	bash scripts/download-from-gdrive.sh \
-		1Ztpq7ssSCWRwHTrXoIIjmZPtBHPm5Hcm \
-		"mods/angelspetrochem_0.9.25.zip" \
-		c3b8a07d16e2913bdd3c2e7d4a7f7b3f
+		1sp9R_X6jYwF9NLLrEEgvHC1u3iAiphN0 \
+		"mods/chest-auto-sort_1.3.0.zip" \
+		20e76e0976650e65a6ed775df3188ecc
 
-mods/angelsrefining_0.12.5.zip:
+mods/CursorEnhancements_2.2.2.zip:
 	mkdir -p mods
 	bash scripts/download-from-gdrive.sh \
-		1gG5dt-s9Wm5ZVr9iDXa0V0WMUGuyNUIa \
-		"mods/angelsrefining_0.12.5.zip" \
-		71b153ed38596504849955b800fac86b
+		1P6epZR4aSLEYrYIngsAwe6k6PRU9ffo1 \
+		"mods/CursorEnhancements_2.2.2.zip" \
+		9f460524ccb76d479417170e3c206bba
 
-mods/angelssmelting_0.6.22.zip:
+mods/flib_0.16.0.zip:
 	mkdir -p mods
 	bash scripts/download-from-gdrive.sh \
-		1trlZnUaeNa8VACUbCDnc9DnCeq8m6rTq \
-		"mods/angelssmelting_0.6.22.zip" \
-		2f86f93ed789e81fe4a9a718b40006d4
+		18nY6JAlTZwLTXcmTiPfgVReLmFEacxKu \
+		"mods/flib_0.16.0.zip" \
+		844134fa0a23e2cead95004dc318f836
 
-mods/boblibrary_1.2.0.zip:
+mods/FluidMustFlow_1.4.2.zip:
 	mkdir -p mods
 	bash scripts/download-from-gdrive.sh \
-		1tgz_L1nznTcPrcJ2uC3gRZxI1HXFwq_B \
-		"mods/boblibrary_1.2.0.zip" \
-		005df00f144d2e385394c0310a9f485d
+		17DSB4GXt_I3clsEVHPnarN_EoYhUXuJL \
+		"mods/FluidMustFlow_1.4.2.zip" \
+		a6d0cd901a6189606388b9164cfa07cc
 
-mods/boblogistics_1.2.0.zip:
+mods/FNEI_0.4.5.zip:
 	mkdir -p mods
 	bash scripts/download-from-gdrive.sh \
-		1qandUeUgrEDNCZIMpg9CNzWAPWh9NUXB \
-		"mods/boblogistics_1.2.0.zip" \
-		cbf38f8050a97f0d45a2041714f79b7f
+		1EC2FNdbbWl9lplxBmUv7qEteGJxQtWQt \
+		"mods/FNEI_0.4.5.zip" \
+		8183af6b4442f5b6ec886f86d0a66d2d
 
-mods/Bottleneck_0.11.7.zip:
+mods/helmod_2.0.14.zip:
 	mkdir -p mods
 	bash scripts/download-from-gdrive.sh \
-		1JfDCm88hS8xbXEKthIlCA60E-6zqd9hT \
-		"mods/Bottleneck_0.11.7.zip" \
-		8e13e77777aa6b73be5d13bae0826a1d
+		1DaC_gtD5xxK2tBtmmYsWskcfSbkddWmr \
+		"mods/helmod_2.0.14.zip" \
+		0a37b0a55a90fbabbd12467921a95207
 
-mods/chest-auto-sort_1.0.0.zip:
+mods/maraxsis_1.24.4.zip:
 	mkdir -p mods
 	bash scripts/download-from-gdrive.sh \
-		1LFtmYLRWt15x-7VW8CclHCIE9PsPtpTD \
-		"mods/chest-auto-sort_1.0.0.zip" \
-		f0f305d50bc103cfcf7d7da68e636090
+		1OO19b2Kr573pESnKVd-tc88DpxB6K7t_ \
+		"mods/maraxsis_1.24.4.zip" \
+		4f356f452b61c8952f32e2d4d852b485
 
-mods/clock_1.1.0.zip:
+mods/Mini_Trains_2.0.0.zip:
 	mkdir -p mods
 	bash scripts/download-from-gdrive.sh \
-		1rDtvs-MqPq_z-4WXGWX9qcAe34MRO1g4 \
-		"mods/clock_1.1.0.zip" \
-		86e80e999c5ba70e264acdd1162034d5
+		1U6acXzm3i9NPfeC93ZXKNvC9JmwODhRR \
+		"mods/Mini_Trains_2.0.0.zip" \
+		e64894d1848ea3084cabd8307022efa3
 
-mods/CursorEnhancements_2.1.0.zip:
+mods/RateCalculator_3.3.4.zip:
 	mkdir -p mods
 	bash scripts/download-from-gdrive.sh \
-		1TZMElGwPPMzYlBkIDajbRgG9WCkt8rQS \
-		"mods/CursorEnhancements_2.1.0.zip" \
-		e23733acf9643508adb7f16f06c00f0e
+		1XkHEoL6liIrc_iS6MW02TKcY-5l8gqtz \
+		"mods/RateCalculator_3.3.4.zip" \
+		952dae57e95524eb6ca6bea6a3f5f8af
 
-mods/flib_0.13.0.zip:
+mods/robot_attrition_0.6.2.zip:
 	mkdir -p mods
 	bash scripts/download-from-gdrive.sh \
-		1QXWMrUE_OXDPgfksvjtn_u47NfFCsQlP \
-		"mods/flib_0.13.0.zip" \
-		8c3b7f3ab3fbb6886c365dba1862d622
+		1mD_lbZ-ebu0kP8R8QJQGr0wwvGSDixDX \
+		"mods/robot_attrition_0.6.2.zip" \
+		1e0237205c9c9fc82a92a847945d8c28
 
-mods/FNEI_0.4.1.zip:
+mods/SpidertronEnhancements_1.10.7.zip:
 	mkdir -p mods
 	bash scripts/download-from-gdrive.sh \
-		12VyJs2vLTpCOVS1RRWl8SdP0qhi9-JZ_ \
-		"mods/FNEI_0.4.1.zip" \
-		0b9b50faf80ae3d121f839759201f998
+		1Fp7AhAFMNzymZOa9opeV1FMluFUV3RoS \
+		"mods/SpidertronEnhancements_1.10.7.zip" \
+		77390d2611954c895eb1596a773fc887
 
-mods/helmod_0.12.19.zip:
+mods/SpidertronPatrols_2.5.8.zip:
 	mkdir -p mods
 	bash scripts/download-from-gdrive.sh \
-		1vscxt50HZhEbmCjb3XT4A815bD28zX-8 \
-		"mods/helmod_0.12.19.zip" \
-		b10544e6828efd46fe8d91ed32659973
+		1RttBbNXXvqkC4VhrflWj2QK68VG4Q-PM \
+		"mods/SpidertronPatrols_2.5.8.zip" \
+		9c5bd32dfa6a602aaf485ba0295cfc17
 
-mods/nullius_1.8.3.zip:
+mods/TimeTools_3.0.8.zip:
 	mkdir -p mods
 	bash scripts/download-from-gdrive.sh \
-		1GxJ0LsnT6GQKt7F8Q76Yp6Jh-q0IXerU \
-		"mods/nullius_1.8.3.zip" \
-		9c286edea401577ab0f0dab9222a5db0
+		1SajYK1QMj2OTO9AX17QVQKeF91uG58PA \
+		"mods/TimeTools_3.0.8.zip" \
+		3e1f96f062f11a3937b013dc2e03b573
 
-mods/nullius-ja_0.4.3.zip:
+mods/visible-planets_1.2.9.zip:
 	mkdir -p mods
 	bash scripts/download-from-gdrive.sh \
-		1mWUhfxE0K5c_jV9dmvT_U6ZTeevFgLuq \
-		"mods/nullius-ja_0.4.3.zip" \
-		2e5e14d342509cb0b65a4bf41d8896f6
-
-mods/RecipeBook_3.5.7.zip:
-	mkdir -p mods
-	bash scripts/download-from-gdrive.sh \
-		1ixEDzFCpIvuxyvzNSernooxWyxt4yqNj \
-		"mods/RecipeBook_3.5.7.zip" \
-		7822fcbd28f2b3a1a72a9fe428252365
-
-mods/Squeak Through_1.8.2.zip:
-	mkdir -p mods
-	bash scripts/download-from-gdrive.sh \
-		1KF4g5o48KV2wk-07cjj4YrNjywVPezRv \
-		"mods/Squeak Through_1.8.2.zip" \
-		318a592c6cce3512b66f26aae9e898b2
-
-mods/TimeTools_2.1.44.zip:
-	mkdir -p mods
-	bash scripts/download-from-gdrive.sh \
-		1uyOv8mtKX2XA1bdxluaD7ZVL0e6RoR23 \
-		"mods/TimeTools_2.1.44.zip" \
-		85afe3db881e9e89e730918c2e932105
-
-mods/Todo-List_19.3.0.zip:
-	mkdir -p mods
-	bash scripts/download-from-gdrive.sh \
-		1mUqYxPpxStLxZctZ2dCOa6TMWLyKlSUT \
-		"mods/Todo-List_19.3.0.zip" \
-		cd2b3dbbc034671600a461514d41de86
-
-mods/YARM_0.10.14.zip:
-	mkdir -p mods
-	bash scripts/download-from-gdrive.sh \
-		1_YCqwvDocnrOC8PiMzjiXacABxCEiL61 \
-		"mods/YARM_0.10.14.zip" \
-		9315c58840a5136790d48bdb08754add
+		14BM6uoiNHK006vf1EuIbVb-JtTxx-Ud8 \
+		"mods/visible-planets_1.2.9.zip" \
+		b0445034caa24afd3167ae7aae2c8b05
