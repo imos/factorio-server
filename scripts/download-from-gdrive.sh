@@ -16,12 +16,12 @@ MD5="$3"
 curl -c "${TMPDIR}/cookie" -o "${TMPDIR}/tmp" -s -L "https://drive.google.com/uc?export=download&id=${FILE_ID}"
 
 # Extract UUID.
-UUID="$(sed -nE 's/.*confirm=t&amp;uuid=([a-f0-9\-]{36}).*/\1/p' "${TMPDIR}/tmp" || echo "")"
+UUID="$(sed -nE 's/.*name="uuid" value="([a-f0-9\-]{36})".*/\1/p' "${TMPDIR}/tmp" || echo "")"
 
 # If the file needs confirmation, it extracts UUID from the warning message and downloads it.
 if [[ "${UUID}" != '' ]]; then
   curl -Lb "${TMPDIR}/cookie" -o "${TMPDIR}/output" \
-    "https://drive.google.com/uc?export=download&id=${FILE_ID}&confirm=t&uuid=${UUID}"
+    "https://drive.usercontent.google.com/download?confirm=t&id=${FILE_ID}&export=download&authuser=0"
 # Otherwise, just rename the file because it is downloaded successfully.
 else
   mv "${TMPDIR}/tmp" "${TMPDIR}/output"
