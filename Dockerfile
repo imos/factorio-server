@@ -14,7 +14,7 @@ RUN wget -O /tmp/gost.gz \
     chmod +x /usr/local/bin/gost
 
 RUN wget -O /tmp/factorio.tar.xz \
-        https://www.factorio.com/get-download/1.1.94/headless/linux64 && \
+        https://www.factorio.com/get-download/2.0.23/headless/linux64 && \
     unar /tmp/factorio.tar.xz
 
 WORKDIR /usr/local/factorio
@@ -28,4 +28,4 @@ ADD scripts /usr/local/scripts
 ADD data/kcp.conf /etc/gost/kcp.conf
 
 ENTRYPOINT ["bash", "/usr/local/scripts/run.sh"]
-CMD ["/usr/local/factorio/saves/PreferredNullius.zip"]
+CMD ["/usr/local/factorio/saves/PreferredSpace.zip"]

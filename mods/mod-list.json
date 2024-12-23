@@ -9,32 +9,17 @@
     },
     
     {
-      "name": "alien-biomes",
+      "name": "elevated-rails",
       "enabled": true
     },
     
     {
-      "name": "angelspetrochem",
+      "name": "quality",
       "enabled": true
     },
     
     {
-      "name": "angelsrefining",
-      "enabled": true
-    },
-    
-    {
-      "name": "angelssmelting",
-      "enabled": true
-    },
-    
-    {
-      "name": "boblibrary",
-      "enabled": true
-    },
-    
-    {
-      "name": "boblogistics",
+      "name": "space-age",
       "enabled": true
     },
     
@@ -49,17 +34,17 @@
     },
     
     {
-      "name": "clock",
-      "enabled": true
-    },
-    
-    {
       "name": "CursorEnhancements",
       "enabled": true
     },
     
     {
       "name": "flib",
+      "enabled": true
+    },
+    
+    {
+      "name": "FluidMustFlow",
       "enabled": true
     },
     
@@ -74,22 +59,32 @@
     },
     
     {
-      "name": "nullius",
+      "name": "maraxsis",
       "enabled": true
     },
     
     {
-      "name": "nullius-ja",
+      "name": "Mini_Trains",
       "enabled": true
     },
     
     {
-      "name": "RecipeBook",
+      "name": "RateCalculator",
       "enabled": true
     },
     
     {
-      "name": "Squeak Through",
+      "name": "robot_attrition",
+      "enabled": true
+    },
+    
+    {
+      "name": "SpidertronEnhancements",
+      "enabled": true
+    },
+    
+    {
+      "name": "SpidertronPatrols",
       "enabled": true
     },
     
@@ -99,12 +94,7 @@
     },
     
     {
-      "name": "Todo-List",
-      "enabled": true
-    },
-    
-    {
-      "name": "YARM",
+      "name": "visible-planets",
       "enabled": true
     }
   ]
