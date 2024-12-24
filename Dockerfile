@@ -14,18 +14,18 @@ RUN wget -O /tmp/gost.gz \
     chmod +x /usr/local/bin/gost
 
 RUN wget -O /tmp/factorio.tar.xz \
-        https://www.factorio.com/get-download/2.0.23/headless/linux64 && \
+        https://www.factorio.com/get-download/2.0.28/headless/linux64 && \
     unar /tmp/factorio.tar.xz
 
 WORKDIR /usr/local/factorio
-ADD mods /usr/local/factorio/mods
-ADD data/server-settings.json /usr/local/factorio/data/
 ADD dlc /tmp/dlc
 RUN cd /tmp/dlc && \
     for f in $(find . -type f); do \
         mkdir -p /usr/local/factorio/data/$(dirname $f) && \
         cp $f /usr/local/factorio/data/$f; \
     done
+ADD mods /usr/local/factorio/mods
+ADD data/server-settings.json /usr/local/factorio/data/
 ADD data/server-adminlist.json /usr/local/factorio/server-adminlist.json
 ADD saves /usr/local/factorio/saves
 

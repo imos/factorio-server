@@ -39,6 +39,8 @@ local timeline_tools =
 space_age_menu_simulations.nauvis_biolab = make_simulation(60 * 12, "nauvis", "menu-simulation-nauvis-biolab.zip", [[]])
 space_age_menu_simulations.nauvis_tank_building = make_simulation(60 * 13, "nauvis", "menu-simulation-nauvis-tank-building.zip",
   timeline_tools .. require("__space-age__.menu-simulations.menu-simulation-nauvis-tank-building"))
+space_age_menu_simulations.nauvis_power_up = make_simulation(60 * 15, "nauvis", "menu-simulation-nauvis-power-up.zip", [[]])
+space_age_menu_simulations.nauvis_bus = make_simulation(60 * 10, "nauvis", "menu-simulation-nauvis-bus.zip", [[]])
 
 space_age_menu_simulations.platform_science = make_simulation(60 * 12, "platform-1", "menu-simulation-platform-science.zip",
   [[ game.surfaces["platform-1"].create_entity{name = "huge-metallic-asteroid", position = {-4, -43}} ]])
