@@ -52,14 +52,14 @@ mods: \
 	mods/FluidMustFlow_1.4.2.zip \
 	mods/FNEI_0.4.5.zip \
 	mods/helmod_2.0.14.zip \
-	mods/maraxsis_1.24.4.zip \
+	mods/maraxsis_1.25.2.zip \
 	mods/Mini_Trains_2.0.0.zip \
-	mods/RateCalculator_3.3.4.zip \
+	mods/RateCalculator_3.3.5.zip \
 	mods/robot_attrition_0.6.2.zip \
 	mods/SpidertronEnhancements_1.10.7.zip \
 	mods/SpidertronPatrols_2.5.8.zip \
 	mods/TimeTools_3.0.8.zip \
-	mods/visible-planets_1.2.9.zip
+	mods/visible-planets_1.2.10.zip
 
 mods/Bottleneck_0.12.1.zip:
 	mkdir -p mods
@@ -117,6 +117,13 @@ mods/maraxsis_1.24.4.zip:
 		"mods/maraxsis_1.24.4.zip" \
 		4f356f452b61c8952f32e2d4d852b485
 
+mods/maraxsis_1.25.2.zip:
+	mkdir -p mods
+	bash scripts/download-from-gdrive.sh \
+		18p24HUUd6OUJKMFklrXWIAOoWFI64DLd \
+		"mods/maraxsis_1.25.2.zip" \
+		5c0e6f3747ee08bfad27d05e1420e047
+
 mods/Mini_Trains_2.0.0.zip:
 	mkdir -p mods
 	bash scripts/download-from-gdrive.sh \
@@ -130,6 +137,13 @@ mods/RateCalculator_3.3.4.zip:
 		1XkHEoL6liIrc_iS6MW02TKcY-5l8gqtz \
 		"mods/RateCalculator_3.3.4.zip" \
 		952dae57e95524eb6ca6bea6a3f5f8af
+
+mods/RateCalculator_3.3.5.zip:
+	mkdir -p mods
+	bash scripts/download-from-gdrive.sh \
+		1-TWAHV3PVbFw-ncdNj349eDGARQDLtuS \
+		"mods/RateCalculator_3.3.5.zip" \
+		ab83d538a4354c0c5033d08b34a54f23
 
 mods/robot_attrition_0.6.2.zip:
 	mkdir -p mods
@@ -165,3 +179,10 @@ mods/visible-planets_1.2.9.zip:
 		14BM6uoiNHK006vf1EuIbVb-JtTxx-Ud8 \
 		"mods/visible-planets_1.2.9.zip" \
 		b0445034caa24afd3167ae7aae2c8b05
+
+mods/visible-planets_1.2.10.zip:
+	mkdir -p mods
+	bash scripts/download-from-gdrive.sh \
+		1uHClGjz2N5XVEYnGJlQzL2Hnj2CJommS \
+		"mods/visible-planets_1.2.10.zip" \
+		d742c8127dda80f3320c05f9ea71ec3c

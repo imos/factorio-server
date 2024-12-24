@@ -1,8 +1,8 @@
 return
 {
-  width = 110,
-  height = 68,
-  shift = util.by_pixel( -2.5, 1.5),
+  width = 126,
+  height = 88,
+  shift = util.by_pixel( 5.0, 3.0),
   line_length = 1,
   filenames = {
     "-1.png",
@@ -18,6 +18,9 @@ return
     "-11.png",
     "-12.png",
     "-13.png",
+    "-14.png",
+    "-15.png",
+    "-16.png",
   },
   lines_per_file = 1,
 }
