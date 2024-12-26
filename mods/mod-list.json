@@ -74,6 +74,11 @@
     },
     
     {
+      "name": "research-cost-curve",
+      "enabled": true
+    },
+    
+    {
       "name": "robot_attrition",
       "enabled": true
     },
