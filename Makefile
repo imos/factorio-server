@@ -51,15 +51,16 @@ mods: \
 	mods/flib_0.16.0.zip \
 	mods/FluidMustFlow_1.4.2.zip \
 	mods/FNEI_0.4.5.zip \
-	mods/helmod_2.0.14.zip \
-	mods/maraxsis_1.25.2.zip \
+	mods/helmod_2.0.15.zip \
+	mods/maraxsis_1.25.5.zip \
 	mods/Mini_Trains_2.0.0.zip \
 	mods/RateCalculator_3.3.5.zip \
+	mods/research-cost-curve_0.1.0.zip \
 	mods/robot_attrition_0.6.2.zip \
 	mods/SpidertronEnhancements_1.10.7.zip \
 	mods/SpidertronPatrols_2.5.8.zip \
 	mods/TimeTools_3.0.8.zip \
-	mods/visible-planets_1.2.10.zip
+	mods/visible-planets_1.2.11.zip
 
 mods/Bottleneck_0.12.1.zip:
 	mkdir -p mods
@@ -110,6 +111,13 @@ mods/helmod_2.0.14.zip:
 		"mods/helmod_2.0.14.zip" \
 		0a37b0a55a90fbabbd12467921a95207
 
+mods/helmod_2.0.15.zip:
+	mkdir -p mods
+	bash scripts/download-from-gdrive.sh \
+		1GEIqs_VcmuaqZWjurE31paEHtgBpuzG8 \
+		"mods/helmod_2.0.15.zip" \
+		d11d578d47b26e103b2a093d39755136
+
 mods/maraxsis_1.24.4.zip:
 	mkdir -p mods
 	bash scripts/download-from-gdrive.sh \
@@ -123,6 +131,13 @@ mods/maraxsis_1.25.2.zip:
 		18p24HUUd6OUJKMFklrXWIAOoWFI64DLd \
 		"mods/maraxsis_1.25.2.zip" \
 		5c0e6f3747ee08bfad27d05e1420e047
+
+mods/maraxsis_1.25.5.zip:
+	mkdir -p mods
+	bash scripts/download-from-gdrive.sh \
+		1x82AdvflhTlraTD5Jq-4gc6drD06X411 \
+		"mods/maraxsis_1.25.5.zip" \
+		f1eefdf22697ed9956cea5b338974c42
 
 mods/Mini_Trains_2.0.0.zip:
 	mkdir -p mods
@@ -144,6 +159,13 @@ mods/RateCalculator_3.3.5.zip:
 		1-TWAHV3PVbFw-ncdNj349eDGARQDLtuS \
 		"mods/RateCalculator_3.3.5.zip" \
 		ab83d538a4354c0c5033d08b34a54f23
+
+mods/research-cost-curve_0.1.0.zip:
+	mkdir -p mods
+	bash scripts/download-from-gdrive.sh \
+		1wnrl9sL0_47eoXjARv6NKFlL3siH7OpB \
+		"mods/research-cost-curve_0.1.0.zip" \
+		b965798f3b3d71f5be4984939d25fd36
 
 mods/robot_attrition_0.6.2.zip:
 	mkdir -p mods
@@ -186,3 +208,10 @@ mods/visible-planets_1.2.10.zip:
 		1uHClGjz2N5XVEYnGJlQzL2Hnj2CJommS \
 		"mods/visible-planets_1.2.10.zip" \
 		d742c8127dda80f3320c05f9ea71ec3c
+
+mods/visible-planets_1.2.11.zip:
+	mkdir -p mods
+	bash scripts/download-from-gdrive.sh \
+		1xj-92lEGANcQ_xwBjnDfxWTdy5AaeFlo \
+		"mods/visible-planets_1.2.11.zip" \
+		d13d77ae4e701a95687f8f448b1f0e82
