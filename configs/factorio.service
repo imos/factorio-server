@@ -1,0 +1,17 @@
+# Template unit file. "@WORKDIR@" is replaced by "make install".
+[Unit]
+Description=Factorio server (make run)
+After=network.target docker.service
+Requires=docker.service
+
+[Service]
+Type=forking
+WorkingDirectory=@WORKDIR@
+Environment=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ExecStart=/usr/bin/env screen -DmS factorio /usr/bin/env make run
+ExecStop=/usr/bin/env screen -S factorio -X quit
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

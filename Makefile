@@ -1,4 +1,6 @@
 DOCKER_REPOSITORY = asia-northeast1-docker.pkg.dev/factorio-imoz-jp/public
+CONFIG_DIR = configs
+SYSTEMD_DIR = /etc/systemd/system
 
 .PHONY: run
 run:
@@ -13,6 +15,19 @@ run-gost:
 	docker run --platform linux/amd64 --rm -i \
 		-p 0.0.0.0:34197:34197/udp --name factorio-gost \
 		"$(DOCKER_REPOSITORY)/gost"
+
+.PHONY: install
+install:
+	install -d "$(SYSTEMD_DIR)"
+	sed "s|@WORKDIR@|$(CURDIR)|g" "$(CONFIG_DIR)/factorio.service" > "$(SYSTEMD_DIR)/factorio.service"
+	sed "s|@WORKDIR@|$(CURDIR)|g" "$(CONFIG_DIR)/gost.service" > "$(SYSTEMD_DIR)/gost.service"
+	chmod 0644 "$(SYSTEMD_DIR)/factorio.service" "$(SYSTEMD_DIR)/gost.service"
+	systemctl daemon-reload
+	systemctl enable factorio gost
+
+.PHONY: status
+status:
+	systemctl status factorio gost --no-pager
 
 ################################################################################
 # Build
