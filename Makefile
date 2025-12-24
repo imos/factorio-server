@@ -25,6 +25,10 @@ install:
 	systemctl daemon-reload
 	systemctl enable factorio gost
 
+.PHONY: status
+status:
+	systemctl status factorio gost --no-pager
+
 ################################################################################
 # Build
 ################################################################################
