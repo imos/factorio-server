@@ -20,14 +20,13 @@ run-gost:
 install:
 	install -d "$(SYSTEMD_DIR)"
 	sed "s|@WORKDIR@|$(CURDIR)|g" "$(CONFIG_DIR)/factorio.service" > "$(SYSTEMD_DIR)/factorio.service"
-	sed "s|@WORKDIR@|$(CURDIR)|g" "$(CONFIG_DIR)/gost.service" > "$(SYSTEMD_DIR)/gost.service"
-	chmod 0644 "$(SYSTEMD_DIR)/factorio.service" "$(SYSTEMD_DIR)/gost.service"
+	chmod 0644 "$(SYSTEMD_DIR)/factorio.service"
 	systemctl daemon-reload
-	systemctl enable factorio gost
+	systemctl enable factorio
 
 .PHONY: status
 status:
-	systemctl status factorio gost --no-pager
+	systemctl status factorio --no-pager
 
 ################################################################################
 # Build
@@ -296,7 +295,7 @@ mods/shield-projector_0.2.2.zip:
 mods/solar-calc_0.5.72.zip:
 	mkdir -p mods
 	bash scripts/download-from-gdrive.sh \
-		1NmMAK_v78Ta5ewcU4RwUrdIuicGU63_q \
+		1rcGDhxUvsueqXsVithlTK_mMzI8_-Gxl \
 		$@ \
 		56fa8615d957d17bd63c5248a225d674
 
