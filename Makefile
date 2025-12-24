@@ -99,7 +99,10 @@ mods: \
 	mods/space-exploration-postprocess_0.7.4.zip \
 	mods/textplates_0.7.2.zip \
 	mods/TimeTools_3.0.8.zip \
-	mods/Todo-List_19.14.1.zip
+	mods/Todo-List_19.14.1.zip \
+	dlc/elevated-rails_2.0.72.zip \
+	dlc/quality_2.0.72.zip \
+	dlc/space-age_2.0.72.zip
 
 mods/aai-containers_0.3.2.zip:
 	mkdir -p mods
@@ -380,3 +383,24 @@ mods/what-is-it-really-used-for_1.7.1.zip:
 		1xU73hlwIuyz_cpLkjKE-7i3KzGHQZA3f \
 		$@ \
 		c0d27a44ab69156a6ce82e9cde056685
+
+dlc/elevated-rails_2.0.72.zip:
+	mkdir -p dlc
+	bash scripts/download-from-gdrive.sh \
+		1_JMCFG9ziAHoIMPmaPfybX5ohgU7SjJ2 \
+		$@ \
+		fff67aeb6b9f002002310c548f8401e9
+
+dlc/quality_2.0.72.zip:
+	mkdir -p dlc
+	bash scripts/download-from-gdrive.sh \
+		1wg9G4182QaqjWX7bv2rsya30ziSH_BeC \
+		$@ \
+		4faca09a60f2847d8639a0109f50fcbd
+
+dlc/space-age_2.0.72.zip:
+	mkdir -p dlc
+	bash scripts/download-from-gdrive.sh \
+		1thsOAffQfFCzhIIw-QmHIUUw3hZoVjEp \
+		$@ \
+		7282eba3f910107116aa7c2573ebbb33

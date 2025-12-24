@@ -18,12 +18,12 @@ RUN wget -O /tmp/factorio.tar.xz \
     unar /tmp/factorio.tar.xz
 
 WORKDIR /usr/local/factorio
-# ADD dlc /tmp/dlc
-# RUN cd /tmp/dlc && \
-#     for f in $(find . -type f); do \
-#         mkdir -p /usr/local/factorio/data/$(dirname $f) && \
-#         cp $f /usr/local/factorio/data/$f; \
-#     done
+ADD dlc /tmp/dlc
+RUN cd /tmp/dlc && \
+    for f in $(find . -type f); do \
+        mkdir -p /usr/local/factorio/data/$(dirname $f) && \
+        cp $f /usr/local/factorio/data/$f; \
+    done
 ADD mods /usr/local/factorio/mods
 ADD data/server-settings.json /usr/local/factorio/data/
 ADD data/server-adminlist.json /usr/local/factorio/server-adminlist.json
