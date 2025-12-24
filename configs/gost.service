@@ -1,0 +1,17 @@
+# Template unit file. "@WORKDIR@" is replaced by "make install".
+[Unit]
+Description=Gost proxy (make run-gost)
+After=network.target docker.service
+Requires=docker.service
+
+[Service]
+Type=forking
+WorkingDirectory=@WORKDIR@
+Environment=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ExecStart=/usr/bin/env screen -DmS gost /usr/bin/env make run-gost
+ExecStop=/usr/bin/env screen -S gost -X quit
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
