@@ -77,6 +77,7 @@ mods: \
 	mods/flib_0.16.5.zip \
 	mods/FNEI_0.4.6.zip \
 	mods/grappling-gun_0.4.1.zip \
+	mods/helmod_2.2.8.zip \
 	mods/informatron_0.4.0.zip \
 	mods/InserterFuelLeech_1.0.2.zip \
 	mods/jetpack_0.4.14.zip \
@@ -221,6 +222,13 @@ mods/grappling-gun_0.4.1.zip:
 		1jPOT5llZUT1kyjMuM9REOWyeKLkqlGQM \
 		$@ \
 		472b8f8fda2ad5e1ead049bc7f69f6b5
+
+mods/helmod_2.2.8.zip:
+	mkdir -p mods
+	bash scripts/download-from-gdrive.sh \
+		1VBGt4TMpQ58GkurRUh0xsPjYvn5VsEa5 \
+		$@ \
+		695d45c0eda89a2f4e83b8ae6df3a72a
 
 mods/informatron_0.4.0.zip:
 	mkdir -p mods

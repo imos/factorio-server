@@ -10,7 +10,7 @@
     
     {
       "name": "elevated-rails",
-      "enabled": true
+      "enabled": false
     },
     
     {
@@ -51,11 +51,6 @@
     {
       "name": "alien-biomes-graphics",
       "enabled": true
-    },
-    
-    {
-      "name": "AutoTrash",
-      "enabled": false
     },
     
     {
