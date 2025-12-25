@@ -4,7 +4,7 @@ SYSTEMD_DIR = /etc/systemd/system
 
 .PHONY: run
 run:
-	docker run --platform linux/amd64 --rm -i \
+	docker run --platform linux/amd64 --rm \
 		-v $(CURDIR)/saves:/usr/local/factorio/saves \
 		-p 0.0.0.0:34197:34197/udp -p 0.0.0.0:8388:8388/udp \
 		--name factorio \
@@ -12,7 +12,7 @@ run:
 
 .PHONY: run-gost
 run-gost:
-	docker run --platform linux/amd64 --rm -i \
+	docker run --platform linux/amd64 --rm \
 		-p 0.0.0.0:34197:34197/udp --name factorio-gost \
 		"$(DOCKER_REPOSITORY)/gost"
 
