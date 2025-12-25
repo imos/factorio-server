@@ -18,11 +18,18 @@ RUN wget -O /tmp/factorio.tar.xz \
     unar /tmp/factorio.tar.xz
 
 WORKDIR /usr/local/factorio
+# DLC files are copied from: ~/Library/Application Support/Steam/steamapps/common/Factorio/factorio.app/Contents/data/space-age
 # ADD dlc /tmp/dlc
-# RUN cd /tmp/dlc && \
-#     for f in $(find . -type f); do \
-#         mkdir -p /usr/local/factorio/data/$(dirname $f) && \
-#         cp $f /usr/local/factorio/data/$f; \
+# RUN mkdir -p /tmp/dlc/extracted && \
+#     for f in /tmp/dlc/*.zip; do \
+#         unar -o /tmp/dlc/extracted "$f"; \
+#     done && \
+#     cd /tmp/dlc/extracted && \
+#     for f in $(find . -type f ! -name '.DS_Store' ! -path '*/__MACOSX/*'); do \
+#         echo "Installing DLC file: $f" && \
+#         dir=$(dirname "$f") && \
+#         mkdir -p "/usr/local/factorio/data/$dir" && \
+#         cp "$f" "/usr/local/factorio/data/$f"; \
 #     done
 ADD mods /usr/local/factorio/mods
 ADD data/server-settings.json /usr/local/factorio/data/

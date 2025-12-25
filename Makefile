@@ -4,7 +4,7 @@ SYSTEMD_DIR = /etc/systemd/system
 
 .PHONY: run
 run:
-	docker run --platform linux/amd64 --rm -i \
+	docker run --platform linux/amd64 --rm \
 		-v $(CURDIR)/saves:/usr/local/factorio/saves \
 		-p 0.0.0.0:34197:34197/udp -p 0.0.0.0:8388:8388/udp \
 		--name factorio \
@@ -12,7 +12,7 @@ run:
 
 .PHONY: run-gost
 run-gost:
-	docker run --platform linux/amd64 --rm -i \
+	docker run --platform linux/amd64 --rm \
 		-p 0.0.0.0:34197:34197/udp --name factorio-gost \
 		"$(DOCKER_REPOSITORY)/gost"
 
@@ -20,14 +20,13 @@ run-gost:
 install:
 	install -d "$(SYSTEMD_DIR)"
 	sed "s|@WORKDIR@|$(CURDIR)|g" "$(CONFIG_DIR)/factorio.service" > "$(SYSTEMD_DIR)/factorio.service"
-	sed "s|@WORKDIR@|$(CURDIR)|g" "$(CONFIG_DIR)/gost.service" > "$(SYSTEMD_DIR)/gost.service"
-	chmod 0644 "$(SYSTEMD_DIR)/factorio.service" "$(SYSTEMD_DIR)/gost.service"
+	chmod 0644 "$(SYSTEMD_DIR)/factorio.service"
 	systemctl daemon-reload
-	systemctl enable factorio gost
+	systemctl enable factorio
 
 .PHONY: status
 status:
-	systemctl status factorio gost --no-pager
+	systemctl status factorio --no-pager
 
 ################################################################################
 # Build
@@ -78,6 +77,7 @@ mods: \
 	mods/flib_0.16.5.zip \
 	mods/FNEI_0.4.6.zip \
 	mods/grappling-gun_0.4.1.zip \
+	mods/helmod_2.2.8.zip \
 	mods/informatron_0.4.0.zip \
 	mods/InserterFuelLeech_1.0.2.zip \
 	mods/jetpack_0.4.14.zip \
@@ -99,7 +99,10 @@ mods: \
 	mods/space-exploration-postprocess_0.7.4.zip \
 	mods/textplates_0.7.2.zip \
 	mods/TimeTools_3.0.8.zip \
-	mods/Todo-List_19.14.1.zip
+	mods/Todo-List_19.14.1.zip \
+	dlc/elevated-rails_2.0.72.zip \
+	dlc/quality_2.0.72.zip \
+	dlc/space-age_2.0.72.zip
 
 mods/aai-containers_0.3.2.zip:
 	mkdir -p mods
@@ -220,6 +223,13 @@ mods/grappling-gun_0.4.1.zip:
 		$@ \
 		472b8f8fda2ad5e1ead049bc7f69f6b5
 
+mods/helmod_2.2.8.zip:
+	mkdir -p mods
+	bash scripts/download-from-gdrive.sh \
+		1VBGt4TMpQ58GkurRUh0xsPjYvn5VsEa5 \
+		$@ \
+		695d45c0eda89a2f4e83b8ae6df3a72a
+
 mods/informatron_0.4.0.zip:
 	mkdir -p mods
 	bash scripts/download-from-gdrive.sh \
@@ -293,7 +303,7 @@ mods/shield-projector_0.2.2.zip:
 mods/solar-calc_0.5.72.zip:
 	mkdir -p mods
 	bash scripts/download-from-gdrive.sh \
-		1NmMAK_v78Ta5ewcU4RwUrdIuicGU63_q \
+		1rcGDhxUvsueqXsVithlTK_mMzI8_-Gxl \
 		$@ \
 		56fa8615d957d17bd63c5248a225d674
 
@@ -380,3 +390,24 @@ mods/what-is-it-really-used-for_1.7.1.zip:
 		1xU73hlwIuyz_cpLkjKE-7i3KzGHQZA3f \
 		$@ \
 		c0d27a44ab69156a6ce82e9cde056685
+
+dlc/elevated-rails_2.0.72.zip:
+	mkdir -p dlc
+	bash scripts/download-from-gdrive.sh \
+		1_JMCFG9ziAHoIMPmaPfybX5ohgU7SjJ2 \
+		$@ \
+		fff67aeb6b9f002002310c548f8401e9
+
+dlc/quality_2.0.72.zip:
+	mkdir -p dlc
+	bash scripts/download-from-gdrive.sh \
+		1wg9G4182QaqjWX7bv2rsya30ziSH_BeC \
+		$@ \
+		4faca09a60f2847d8639a0109f50fcbd
+
+dlc/space-age_2.0.72.zip:
+	mkdir -p dlc
+	bash scripts/download-from-gdrive.sh \
+		1thsOAffQfFCzhIIw-QmHIUUw3hZoVjEp \
+		$@ \
+		7282eba3f910107116aa7c2573ebbb33
