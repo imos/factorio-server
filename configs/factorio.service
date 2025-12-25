@@ -8,7 +8,7 @@ Requires=docker.service
 Type=forking
 WorkingDirectory=@WORKDIR@
 Environment=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-ExecStart=/usr/bin/env screen -DmS factorio /usr/bin/env make run
+ExecStart=/usr/bin/env screen -dmS factorio /usr/bin/env make run
 ExecStop=/usr/bin/env screen -S factorio -X quit
 Restart=on-failure
 RestartSec=5
