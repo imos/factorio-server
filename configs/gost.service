@@ -8,7 +8,7 @@ Requires=docker.service
 Type=forking
 WorkingDirectory=@WORKDIR@
 Environment=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-ExecStart=/usr/bin/env screen -DmS gost /usr/bin/env make run-gost
+ExecStart=/usr/bin/env screen -dmS gost /usr/bin/env make run-gost
 ExecStop=/usr/bin/env screen -S gost -X quit
 Restart=on-failure
 RestartSec=5
